@@ -25,24 +25,6 @@ class CityController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/map", name="map", methods={"GET","POST"})
-     */
-    public function map(CityRepository $cityRepository): Response
-    {
-        $cities = $cityRepository->findAll();
-        $NbCities = count($cities);
-        $map= array();
-        for($i = 0; $i < $NbCities; $i++) {
-              $map[] = '"' . $cities[$i]->getName() . '"' . "," . $cities[$i]->getLongitude() . ",". $cities[$i]->getLatitude();
-        }
-        $_SESSION['map'] = $map;
-//        dd($_SESSION);
-        return $this->render('map/index.html.twig', [
-            'cities' => $cityRepository->findAll(),
-            'map' => $map
-        ]);
-    }
 
     /**
      * @Route("/new", name="city_new", methods={"GET","POST"})
