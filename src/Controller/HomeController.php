@@ -24,6 +24,7 @@ class HomeController extends AbstractController
         $good_deal = $this-> getDoctrine()
             ->getRepository(GoodDeal::class)
             ->findAll();
+        //maps
         $cities = $cityRepository->findAll();
         $maps = $serializer->serialize($cities, 'json');
         return $this->render('home/index.html.twig', [
