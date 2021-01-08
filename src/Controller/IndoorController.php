@@ -12,7 +12,7 @@ class IndoorController extends AbstractController
 {
 
     /**
-     * @Route("/je-renove/intérieur", name="indoor_index")
+     * @Route("/je_renove/interieur", name="indoor_index")
      * @return Response
      */
 
