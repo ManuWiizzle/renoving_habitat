@@ -25,12 +25,7 @@ class HomeController extends AbstractController
             ->getRepository(GoodDeal::class)
             ->findAll();
         $cities = $cityRepository->findAll();
-        $NbCities = count($cities);
-        $map= array();
-        for($i = 0; $i < $NbCities; $i++) {
-            $map[] = '"' . $cities[$i]->getName() . '"' . "," . $cities[$i]->getLongitude() . ",". $cities[$i]->getLatitude();
-        }
-        $maps = $serializer->serialize($map, 'json');
+        $maps = $serializer->serialize($cities, 'json');
         return $this->render('home/index.html.twig', [
             'good_deal' => $good_deal,
             'maps' => $maps
