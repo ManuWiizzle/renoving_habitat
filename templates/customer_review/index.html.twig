@@ -1,0 +1,46 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block title %}CustomerReview index{% endblock %}
+
+{% block body %}
+    <div class="h1_title_container mx-auto mt-100px mb-5">
+        <h1 class="text-center">Avis clients index</h1>
+    </div>
+
+    <div class="container">
+    <table class="zui-table zui-table-rounded mx-auto">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Review</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for customer_review in customer_reviews %}
+            <tr>
+                <td>{{ customer_review.id }}</td>
+                <td>{{ customer_review.firstname }}</td>
+                <td>{{ customer_review.lastname }}</td>
+                <td>{{ customer_review.review }}</td>
+                <td>
+                    <a href="{{ path('customer_review_edit', {'id': customer_review.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+    <div class="w-100 text-center">
+        <a href="{{ path('customer_review_new') }}">
+            <button type="button" class="create_good_deal_button"><p>Créer un nouveau avis client</p></button>
+        </a>
+    </div>
+{% endblock %}

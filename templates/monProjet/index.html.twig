@@ -1,0 +1,459 @@
+{% extends 'layout_visitor.html.twig' %}
+{% block body %}
+    <div class="container-fluid px-5 main_categ_projet_container">
+        <div class="projet-title">
+            <div class="bord mx-auto mt-2 mb-5">
+                <h1 class="pb-2 display-4">Projet personnalisé</h1>
+            </div>
+        </div>
+        <p class="text-center mb-4composer create-project symfony/website-skeleton my-project">Sélectionnez les
+            catégories qui vous concernes</p>
+        <div class="row main_categories_row">
+            <div class="col-lg-4 text-center">
+                <div class="form-check form-check-inline">
+                    <ul class="ul_nostyle">
+                        <li>
+                            <img class="mon_projet_checkbox_image rounded"
+                                 src="{{ asset('build/images/mon_projet_image/tuile.jpg') }}"
+                                 alt="toiture">
+                        </li>
+                        <li class="checkbox">
+                            <label class="form-check-label pt-3 pb-2" for="inlineCheckbox1">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                Toiture
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="form-check form-check-inline">
+                    <ul class="ul_nostyle">
+                        <li>
+                            <img class="mon_projet_checkbox_image rounded"
+                                 src="{{ asset('build/images/mon_projet_image/ravalement.jpg') }}"
+                                 alt="ravalement">
+                        </li>
+                        <li class="checkbox">
+                            <label class="form-check-label pt-3 pb-2" for="inlineCheckbox2">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option1">
+                                <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                Ravalement
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="form-check form-check-inline">
+                    <ul class="ul_nostyle">
+                        <li>
+                            <img class="mon_projet_checkbox_image rounded"
+                                 src="{{ asset('build/images/mon_projet_image/chauffage.jpg') }}"
+                                 alt="chauffage">
+                        </li>
+                        <li class="checkbox">
+                            <label class="form-check-label pt-3 pb-2" for="inlineCheckbox3">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1">
+                                <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                Chauffage Maison
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row main_categories_row">
+            <div class="col-lg-4 text-center">
+                <div class="form-check form-check-inline">
+                    <ul class="ul_nostyle">
+                        <li>
+                            <img class="mon_projet_checkbox_image rounded"
+                                 src="{{ asset('build/images/mon_projet_image/terrassement.jpg') }}" alt="terrassement">
+                        </li>
+                        <li class="checkbox">
+                            <label class="form-check-label pt-3 pb-2" for="inlineCheckbox4">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option1">
+                                <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                Travaux exterieur
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="form-check form-check-inline">
+                    <ul class="ul_nostyle">
+                        <li>
+                            <img class="mon_projet_checkbox_image rounded"
+                                 src="{{ asset('build/images/mon_projet_image/travaux_interieur.jpg') }}"
+                                 alt="Travaux intérieur">
+                        </li>
+                        <li class="checkbox">
+                            <label class="form-check-label pt-3 pb-2" for="inlineCheckbox5">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option1">
+                                <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                Travaux intérieur
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="form-check form-check-inline">
+                    <ul class="ul_nostyle">
+                        <li>
+                            <img class="mon_projet_checkbox_image rounded"
+                                 src="{{ asset('build/images/mon_projet_image/salle_de_bain.jpg') }}"
+                                 alt="Salle de bain">
+                        </li>
+                        <li class="checkbox">
+                            <label class="form-check-label pt-3 pb-2" for="inlineCheckbox6">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option1">
+                                <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                Salle de bain
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {# display any flash message #}
+    <div class="container">
+        {% for message in app.flashes('notice') %}
+            <div class="alert alert-success w-60 py-4 mx-auto" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+        {{ form_start(form) }}
+        <div class="row form_container">
+            <div class="col-lg-6 form_projet" id="formCouverture">
+                <div class="card mt-4">
+                    <!-- Default panel contents -->
+                    <div class="card-header form_title">Couverture</div>
+
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item">
+                            Tuiles cassées ?
+                            <label class="switch">
+                                {{ form_widget(form.roofing.roofTiles, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+
+                        <li class="list-group-item">
+                            Fuite d'eau ?
+                            <label class="switch">
+                                {{ form_widget(form.roofing.waterLeak, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+
+                        <li class="list-group-item">
+                            Présence de mousse / algue / lichen / champignon ?
+                            <label class="switch">
+                                {{ form_widget(form.roofing.mosse, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+
+                        <li class="list-group-item">
+                            Dernier traitement ?
+                            <div class="radio_container float-right">
+                                <div class="form-check mt-1">
+                                    <label>
+                                        {{ form_widget(form.roofing.lastTreatment[0]) }}
+                                        <span class="label-text">+ de 5 ans</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label>
+                                        {{ form_widget(form.roofing.lastTreatment[1]) }}
+                                        <span class="label-text">- de 5 ans</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 form_projet" id="formRavalement">
+                <div class="card mt-4">
+                    <!-- Default panel contents -->
+                    <div class="card-header form_title">Ravalement de façade</div>
+
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item">
+                            Salissure ?
+                            <label class="switch ">
+                                {{ form_widget(form.facade.smear, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+
+                        <li class="list-group-item">
+                            Décollement ?
+                            <label class="switch">
+                                {{ form_widget(form.facade.peelingOff, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+
+                        <li class="list-group-item">
+                            Remonté capillaire au niveau du sol ?
+                            <label class="switch">
+                                {{ form_widget(form.facade.humidification, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+
+                        <li class="list-group-item">
+                            Fissure présente depuis ?
+                            <div class="radio_container float-right">
+                                <div class="form-check mt-1">
+                                    <label>
+                                        {{ form_widget(form.facade.cracksFrom[0]) }}
+                                        <span class="label-text">+ de 10 ans</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label>
+                                        {{ form_widget(form.facade.cracksFrom[1]) }}
+                                        <span class="label-text">- de 10 ans</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            Taille des fissures (horizontal / vertical) ?
+                            <div class="radio_container float-right">
+                                <div class="form-check mt-1">
+                                    <label>
+                                        {{ form_widget(form.facade.cracksSize[0]) }}
+                                        <span class="label-text">+ de 1 cm</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label>
+                                        {{ form_widget(form.facade.cracksSize[1]) }}
+                                        <span class="label-text">- de 1 cms</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 form_projet" id="formChauffage">
+                <div class="card mt-4">
+                    <!-- Default panel contents -->
+                    <div class="card-header form_title">Chauffage maison</div>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Changement Total
+                            <label class="switch">
+                                {{ form_widget(form.heating.totalReplacement, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            Entretient
+                            <label class="switch">
+                                {{ form_widget(form.heating.maintain, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+
+                        <li class="list-group-item">
+                            Réparation
+                            <label class="switch">
+                                {{ form_widget(form.heating.reparation, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+
+                        <li class="list-group-item">
+                            Type de chauffage ?
+                            <div class="radio_container float-right">
+                                <div class="form-check mt-1">
+                                    <label>
+                                        {{ form_widget(form.heating.heatingType[0]) }}
+                                        <span class="label-text">Electrique</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label>
+                                        {{ form_widget(form.heating.heatingType[1]) }}
+                                        <span class="label-text">Gaz</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label>
+                                        {{ form_widget(form.heating.heatingType[2]) }}
+                                        <span class="label-text">Fioul</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 form_projet" id="formTerrassement">
+                <div class="card mt-4">
+                    <!-- Default panel contents -->
+                    <div class="card-header form_title">Travaux exterieur</div>
+
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item">
+                            Béton désactivé ?
+                            <label class="switch ">
+                                {{ form_widget(form.earthwork.disabledConcrete, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+
+                        <li class="list-group-item">
+                            Dalle de béton ?
+                            <label class="switch">
+                                {{ form_widget(form.earthwork.concreteSlab, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+
+                        <li class="list-group-item">
+                            Carrelage ?
+                            <label class="switch">
+                                {{ form_widget(form.earthwork.floorTiles, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 form_projet" id="formTravauxInterieur">
+                <div class="card mt-4">
+                    <!-- Default panel contents -->
+                    <div class="card-header form_title">Travaux intérieurs</div>
+
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item">
+                            Rénovation de pièces ?
+                            <label class="switch ">
+                                {{ form_widget(form.housework.renovation, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+
+                        <li class="list-group-item">
+                            Tâches noires ?
+                            <label class="switch">
+                                {{ form_widget(form.housework.blackSpots, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+
+                        <li class="list-group-item">
+                            Décollement de papier peint ?
+                            <label class="switch">
+                                {{ form_widget(form.housework.paperPeelingOff, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 form_projet" id="formSalleDeBain">
+                <div class="card mt-4">
+                    <!-- Default panel contents -->
+                    <div class="card-header form_title">Salle de bain</div>
+
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item">
+                            Douche à l'italienne ?
+                            <label class="switch">
+                                {{ form_widget(form.bathroom.italianShower, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+
+                        <li class="list-group-item">
+                            Cabine de douche ?
+                            <label class="switch">
+                                {{ form_widget(form.bathroom.showerCabin, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+
+                        <li class="list-group-item">
+                            Faïence ?
+                            <label class="switch">
+                                {{ form_widget(form.bathroom.earthenware, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+
+                        <li class="list-group-item">
+                            Carrelage ?
+                            <label class="switch">
+                                {{ form_widget(form.bathroom.floorTiles, { 'attr': {'class': 'primary'} }) }}
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="form-group mt-5" id="my-form">
+            <div class="projet-title">
+                <div class="bord mx-auto mt-2 mb-5">
+                    <h2 class="pb-2 display-4">Mes informations</h2>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="text-center requiredField"><span></span> Champs obligatoires</p>
+        </div>
+        <div class="row pt-3">
+            <div class="col-lg-6 info_pers_form mt-2">
+                <label for="firstname">Prénom <span class="asterix">*</span></label>
+                {{ form_widget(form.personal.firstname, { 'attr': {'class': 'form-control'} }) }}
+            </div>
+            <div class="col-lg-6 info_pers_form mt-2">
+                <label for="lastname">Nom <span class="asterix">*</span></label>
+                {{ form_widget(form.personal.lastname, { 'attr': {'class': 'form-control'} }) }}
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-lg-6 info_pers_form mt-2">
+                <label for="email">Email <span class="asterix">*</span></label>
+                {{ form_widget(form.personal.email, { 'attr': {'class': 'form-control'} }) }}
+            </div>
+            <div class="col-lg-6 info_pers_form mt-2">
+                <label for="address">Adresse <span class="asterix">*</span></label>
+                {{ form_widget(form.personal.address, { 'attr': {'class': 'form-control'} }) }}
+            </div>
+        </div>
+        <div class="info_pers_form mt-2 pt-3">
+            <label for="FormControlTextarea">Message <span class="asterix">*</span></label>
+            {{ form_widget(form.personal.message, { 'attr': {'class': 'form-control', 'rows': '7'} }) }}
+        </div>
+        <div class="w-100 text-center">
+            <button type="submit" class="sendButton"><p>Envoyer</p></button>
+        </div>
+    </div>
+    {{ form_end(form) }}
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    {{ encore_entry_script_tags('monprojet') }}
+{% endblock %}

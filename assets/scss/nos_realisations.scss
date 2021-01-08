@@ -1,0 +1,215 @@
+.rea-title {
+  .bord {
+    border-left: none;
+    border-top: none;
+    border-right: 2px solid $darker-secondary-color;
+    border-bottom: 2px solid $darker-secondary-color;
+    transform: skew(25deg);
+    width: 40%;
+    justify-content: center;
+
+    h2 {
+      font-size: 2.5em;
+      color: $darker-secondary-color;
+      text-align: center;
+      transform: skew(-25deg);
+    }
+  }
+  @media (max-width: 768px) {
+    .bord {
+      width: 90%;
+      border-right: none;
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+
+  }
+}
+.rea-review {
+  .bord-bis {
+    border-left: none;
+    border-top: none;
+    border-right: 2px solid $darker-secondary-color;
+    border-bottom: 2px solid $darker-secondary-color;
+    transform: skew(25deg);
+    width: 60%;
+    justify-content: center;
+
+    h2 {
+      font-size: 2.5em;
+      color: $darker-secondary-color;
+      text-align: center;
+      transform: skew(-25deg);
+    }
+  }
+  @media (max-width: 768px) {
+    .bord-bis {
+      width: 90%;
+      border-right: none;
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+
+  }
+}
+.nos_real_title_container {
+  margin: 0 auto;
+  width: 25%;
+  padding: 10px;
+  border-right: 2px solid $dark-color;
+  border-bottom: 2px solid $dark-color;
+  transform: skew(25deg);
+}
+
+.nos_real_subtitle_container {
+  margin: 0 auto;
+  width: 15%;
+  padding: 10px;
+  border-right: 1px solid $dark-color;
+  border-bottom: 1px solid $dark-color;
+  transform: skew(25deg);
+}
+
+.nos_real_main_title {
+  transform: skew(-25deg);
+  text-align: center;
+}
+
+.nos_real_second_title {
+  transform: skew(-25deg);
+  text-align: center;
+  font-size: 150%;
+}
+
+.h1_title_container{
+  width: 50%;
+  background-color: $brand-color;
+  transform: skewX(25deg);
+  padding-top: 16px;
+  padding-bottom: 14px;
+}
+
+.h2_title_container{
+  width: 40%;
+  background-color: $brand-color;
+  transform: skewX(25deg);
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+
+.h1_title_container > h1 {
+  color: $white;
+  transform: skewX(-25deg);
+}
+
+.h2_title_container > h2 {
+  color: $white;
+  transform: skewX(-25deg);
+}
+
+.realisation_main_text {
+  margin: 0 auto;
+  text-align: left;
+  font-size: 120%;
+  font-style: italic;
+}
+
+.intro-realisation {
+  text-align: left;
+  margin-top: 4.55em;
+
+  .page-name {
+    margin-top: 2em;
+  }
+
+  .jumbotron {
+    background-image: url("../images/nos_real_categories/house_hand.jpg");
+    background-attachment: fixed;
+    height: 50vh;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    background-position: top;
+    background-size: cover;
+  }
+
+  h1 {
+    color: $brand-color;
+    font-variant: small-caps;
+    text-align: center;
+    margin-top: 3.5em;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 3px;
+    text-shadow: 2px 3px 2px $shadow;
+  }
+
+  @media screen and (max-width: 768px) {
+    .jumbotron {
+      height: 12em;
+      margin-bottom: 0;
+      h1 {
+        font-size: 2em;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.main_categories_row {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.work_categories_img {
+  max-width: 100%;
+  filter: brightness(60%);
+  transition: 0.25s ease-in-out;
+}
+
+.work_categories_img_container {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0;
+}
+
+.work_categories_img_container:hover > .work_categories_img {
+  filter: brightness(80%);
+  transition: 0.25s ease-in-out;
+}
+
+.mosaique_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $white;
+  font-size: calc(1em + 2vw)
+}
+
+.client_container {
+    margin-top: 75px;
+}
+
+.cust_review_container {
+  padding-top: 60px;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.client_react {
+  text-align: center;
+  font-size: 130%;
+  font-style: italic;
+}
+
+.client_id {
+  margin-top: 10px;
+  float: right;
+}
+
+.modal_link {
+  cursor: pointer;
+}

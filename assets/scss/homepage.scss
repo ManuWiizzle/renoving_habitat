@@ -1,0 +1,506 @@
+
+
+#maped_house_container {
+	width: 100%;
+	display: flex;
+  	justify-content: center;
+}
+
+.maped_house_image{
+    display: block;
+    width: 80%;
+}
+
+#img-tooltip {
+  	position: absolute;
+}
+.sentence_slider{
+  font-size: 1.5em;
+}
+#slider {
+    width: 800px !important;
+    margin: 0 auto;
+}
+
+#sliderContainer {
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+#beforeAfter{
+  background-color: $grey;
+}
+
+.nav_button_beforeAfter {
+  width: 4em;
+
+}
+
+.before-after-container {
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jx-knightlab {
+  visibility: hidden;
+}
+
+.arrow {
+  border: solid $dark-color;
+  border-width: 0 15px 15px 0;
+  display: inline-block;
+  padding: 15px;
+}
+
+.arrow:hover {
+  border-width: 0 20px 20px 0;
+}
+
+.right {
+  transform: rotate(-45deg);
+  margin-left: 50px;
+}
+
+.right:hover {
+  transform: rotate(-45deg);
+  margin-left: 45px;
+}
+
+.left {
+  transform: rotate(135deg);
+  margin-right: 50px;
+}
+
+.left:hover {
+  margin-right: 45px;
+}
+
+.light_gray {
+  background-color: $secondary-color;
+}
+.zone {
+  .bord {
+    border-left: none;
+    border-top: none;
+    border-right: 2px solid $darker-secondary-color;
+    border-bottom: 2px solid $darker-secondary-color;
+    transform: skew(25deg);
+    width: 40%;
+    justify-content: center;
+    h2 {
+      font-size: 2.5em;
+      color: $darker-secondary-color;
+      text-align: center;
+      transform: skew(-25deg);
+    }
+  }
+  @media (max-width: 768px) {
+    .bord {
+      width: 90%;
+      border-right: none;
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+}
+
+.presentation {
+  text-align: left;
+  margin-top: 4.55em;
+  .mainTitle {
+    margin-top: 2em;
+  }
+  .jumbotron {
+    background-image: url("../images/homepage/bg2.png");
+    height: 47vh;
+    object-fit:cover;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    background-position: right top;
+  }
+  @media screen and (max-width: 768px) {
+    .mainTitle {
+      margin-top: 0;
+      background-color: $transparent-white;
+    }
+    .jumbotron {
+      height: 15em;
+
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+
+  h1 {
+    color: $brand-color;
+    font-variant: small-caps;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+}
+.intro {
+  text-align: left;
+  background-color: $brand-color;
+  .bord {
+    border-left: none;
+    border-top: none;
+    border-right: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+    transform: skew(25deg);
+    width: 40%;
+    justify-content: center;
+    h2 {
+      font-size: 2.5em;
+      color: $secondary-color;
+      text-align: center;
+      transform: skew(-25deg);
+    }
+  }
+  @media (max-width: 768px) {
+    .bord {
+      width: 90%;
+      border-right: none;
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+
+  }
+
+
+  p {
+    color: $secondary-color;
+  }
+  img {
+    position: relative;
+    border-radius: 0 100px 0 100px;
+    box-shadow: inset -5px -4px 13px -8px $shadow;
+  }
+}
+
+.house {
+  h2 {
+    font-size: 2.5em;
+    color: $darker-secondary-color;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+.partenaires {
+  background-color: $brand-color;
+  .bord {
+    border-left: none;
+    border-top: none;
+    border-right: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+    transform: skew(25deg);
+    width: 40%;
+    justify-content: center;
+    h2 {
+      font-size: 2.5em;
+      color: $secondary-color;
+      text-align: center;
+      transform: skew(-25deg);
+    }
+  }
+  @media (max-width: 768px) {
+    .bord {
+      width: 90%;
+      border-right: none;
+
+      h2 {
+        font-size: 1em;
+      }
+    }
+  }
+
+  .title {
+    p {
+      color: $secondary-color;
+    }
+  }
+  .logo-partenaires {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .card-logo {
+      width: 20em;
+      margin-bottom: 3em;
+    }
+    .logo {
+      height: 5em;
+      line-height: 5em;
+      display: inline-block;
+      img {
+        max-height: max-content;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.bon-plans {
+  align-content: center;
+  background: url("../images/main/mini_gift_house.png");
+  background-color: $secondary-color;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  background-position: right;
+  p {
+    text-align: center;
+    vertical-align: middle;
+  }
+  .gooddeal {
+    .bord {
+      border-left: none;
+      border-top: none;
+      border-right: 2px solid $darker-secondary-color;
+      border-bottom: 2px solid $darker-secondary-color;
+      transform: skew(25deg);
+      width: 40%;
+      justify-content: center;
+      h2 {
+        font-size: 2.5em;
+        color: $darker-secondary-color;
+        text-align: center;
+        transform: skew(-25deg);
+      }
+    }
+    @media (max-width: 768px) {
+      .bord {
+        width: 90%;
+        border-right: none;
+
+        h2 {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+  .box {
+    margin-top: 3em;
+    display: ruby-text;
+  }
+  .postit {
+    h3 {
+      font-size: 2em;
+      color: $brand-color;
+    }
+    img {
+      margin-top: -1em;
+    }
+    text-align: center;
+    color: $darker-secondary-color;
+    width: 20em;
+    height: 20em;
+    background-color: $postit;
+    padding: 1em;
+    font-family: $font-hand-writing;
+    box-shadow: 2px 4px 6px $darker-secondary-color;
+    transform: rotate(-3deg);
+    p {
+      font-size: 1.5em;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .bon-plans {
+    background-image: none;
+
+    .box {
+      display: flex;
+    }
+    p {
+      margin-top: 2em;
+    }
+  }
+}
+
+.avant-apres {
+  background-color: $light-brand-color;
+  .bord {
+    border-left: none;
+    border-top: none;
+    border-right: 2px solid $darker-secondary-color;
+    border-bottom: 2px solid $darker-secondary-color;
+    transform: skew(25deg);
+    width: 40%;
+    justify-content: center;
+    h2 {
+      font-size: 2.5em;
+      color: $darker-secondary-color;
+      text-align: center;
+      transform: skew(-25deg);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .bord {
+      width: 90%;
+      border-right: none;
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+  a {
+    i {
+      font-size: 3em;
+      color: $brand-color;
+    }
+    i:hover {
+      color: $primary-color;
+    }
+  }
+  @media screen and (max-width: 768px ){
+    a {
+      i {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.green_container {
+  background-color: #d9eec4;
+  width: 80%;
+  margin: 0 auto;
+  border-bottom-left-radius: 80px 80px;
+  border-bottom-right-radius: 80px 80px;
+}
+
+.gooddeal_container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.h2_box {
+  width: 400px;
+  background-color: #009933;
+  border-radius: 30px;
+  margin: 0 auto;
+}
+
+.form_title {
+  font-size: 120%;
+}
+
+.broken-house {
+  .bord {
+    border-left: none;
+    border-top: none;
+    border-right: 2px solid $darker-secondary-color;
+    border-bottom: 2px solid $darker-secondary-color;
+    transform: skew(25deg);
+    width: 40%;
+    justify-content: center;
+    h2 {
+      font-size: 2.5em;
+      color: $darker-secondary-color;
+      text-align: center;
+      transform: skew(-25deg);
+    }
+  }
+  @media (max-width: 768px) {
+    .bord {
+      width: 90%;
+      border-right: none;
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .structure {
+    .pic:hover .image {
+      opacity: 0.65;
+    }
+    .pic:hover .overlay {
+      opacity: 1;
+    }
+    .pic {
+      .category {
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        border-radius: 2px;
+        text-decoration: none;
+        background-color: $brand-color;
+        color: $primary-color;
+      }
+    }
+    .overlay {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .category {
+      font-size: 1.5em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      vertical-align: middle;
+    }
+    .image {
+      opacity: 1;
+      margin-bottom: 1em;
+      border: 2px solid $brand-color;
+      width: 20em;
+      height: 10em;
+      display: block;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+  }
+  @media (max-width: 800px) {
+    .pic .image {
+      opacity: 0.65;
+    }
+    .pic .overlay {
+      opacity: 1;
+    }
+  }
+
+}
+
+.logo_partner {
+  max-height: 4.8em !important;
+}
+

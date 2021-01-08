@@ -1,0 +1,324 @@
+.intro-entreprise {
+  text-align: left;
+  margin-top: 4.55em;
+
+  .page-name {
+    margin-top: 2em;
+  }
+
+  .jumbotron {
+    background-image: url("../images/main/construction-men.png");
+    background-attachment: fixed;
+    height: 50vh;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    background-position: top;
+    background-size: contain;
+  }
+
+  h1 {
+    color: $brand-color;
+    font-variant: small-caps;
+    text-align: center;
+    margin-top: 3.5em;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 3px;
+    text-shadow: 2px 3px 2px $shadow;
+  }
+
+  @media screen and (max-width: 768px) {
+    .jumbotron {
+      height: 12em;
+      margin-bottom: 0;
+      h1 {
+        font-size: 2em;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.advise {
+  .bord {
+    border-left: none;
+    border-top: none;
+    border-right: 2px solid $darker-secondary-color;
+    border-bottom: 2px solid $darker-secondary-color;
+    transform: skew(25deg);
+    width: 40%;
+    justify-content: center;
+
+    h2 {
+      font-size: 2.5em;
+      color: $darker-secondary-color;
+      text-align: center;
+      transform: skew(-25deg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bord {
+      width: 90%;
+      border-right: none;
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+
+    div {
+      h3 {
+        padding-top: 0.5em;
+        font-size: 1.8em;
+        justify-content: center;
+        text-align: center;
+        font-variant: small-caps;
+
+        i {
+          padding-right: 0.5em;
+          font-size: 1.5em;
+          color: $primary-color;
+          justify-content: left;
+        }
+      }
+
+      p {
+        padding: 1em;
+        font-size: 1.1em;
+      }
+
+      color: $secondary-color;
+      width: 20em;
+      height: 20em;
+      margin: 1em;
+      text-align: left;
+      border-radius: 3px;
+      background-color: $brand-color;
+    }
+
+    @media screen and (max-width: 768px) {
+      div {
+        width: 90%;
+        height: 15em;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.with-us {
+  .bord {
+    border-left: none;
+    border-top: none;
+    border-right: 2px solid $darker-secondary-color;
+    border-bottom: 2px solid $darker-secondary-color;
+    transform: skew(25deg);
+    width: 40%;
+    justify-content: center;
+
+    h2 {
+      font-size: 2.5em;
+      color: $darker-secondary-color;
+      text-align: center;
+      transform: skew(-25deg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bord {
+      width: 90%;
+      border-right: none;
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+
+  }
+  margin-top: 5em;
+  background-color: $light-brand-color;
+
+  .why-renoving {
+    ul {
+      list-style: none;
+
+      li {
+        display: inline;
+        font-size: 1.2em;
+        font-variant: small-caps;
+
+        i {
+          color: $brand-color;
+          font-size: 1.5em;
+        }
+      }
+    }
+
+    p {
+      text-align: left;
+    }
+
+    .colored-text {
+      padding-top: 1.5em;
+      color: $brand-color;
+      font-size: 1.5em;
+    }
+
+    @media (max-width: 1000px) {
+      ul {
+        padding-left: 0;
+
+        li {
+          display: block;
+          margin-bottom: 2em;
+        }
+      }
+    }
+  }
+}
+
+.qualifications {
+  .bord {
+    border-left: none;
+    border-top: none;
+    border-right: 2px solid $darker-secondary-color;
+    border-bottom: 2px solid $darker-secondary-color;
+    transform: skew(25deg);
+    width: 80%;
+    justify-content: center;
+
+    h2 {
+      font-size: 2.5em;
+      color: $darker-secondary-color;
+      text-align: center;
+      transform: skew(-25deg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bord {
+      width: 90%;
+      border-right: none;
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+
+  }
+
+  .box {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .quality {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    div {
+      display: block;
+      text-align: center;
+
+      img {
+        max-height: 8.3em;
+      }
+
+      p {
+        padding-top: 3em;
+        font-size: 1.1em;
+      }
+
+      width: 20em;
+    }
+  }
+
+  .conclusion {
+    text-align: left;
+    background-color: $brand-color;
+    color: $secondary-color;
+    font-size: 1.5em;
+    margin-top: 2em;
+    font-style: oblique;
+  }
+}
+
+.help {
+  background-repeat: no-repeat;
+  background-position: right;
+
+  .bord {
+    border-left: none;
+    border-top: none;
+    border-right: 2px solid $darker-secondary-color;
+    border-bottom: 2px solid $darker-secondary-color;
+    transform: skew(25deg);
+    width: 80%;
+    justify-content: center;
+
+    h2 {
+      font-size: 2.5em;
+      color: $darker-secondary-color;
+      text-align: center;
+      transform: skew(-25deg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bord {
+      width: 90%;
+      border-right: none;
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+
+  }
+
+  h3 {
+    text-align: left;
+    font-size: 1.5em;
+  }
+
+  p {
+    text-align: left;
+    padding-bottom: 1.5em;
+
+    span {
+      color: $brand-color;
+      font-weight: bold;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      text-align: left;
+      font-size: 1.05em;
+
+      img {
+        height: 3em;
+        width: 3em;
+
+        .big {
+          height: 1.5em;
+          width: 1.5em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<nav class="navbar navigation navbar-expand-xl fixed-top navbar-light">
+    <a class="navbar-brand" href="/"><img src="{{ asset('build/images/main/logo_no_back.png') }}" width=" 250em" alt="RenovingHabitat"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('good_deal_index') }}">Bon Plans</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('customer_review_index') }}">Avis clients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout"><i class="fas fa-power-off"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>

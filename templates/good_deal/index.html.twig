@@ -1,0 +1,44 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block title %}Bons Plans index{% endblock %}
+
+{% block body %}
+    <div class="h1_title_container mx-auto mt-100px mb-5">
+        <h1 class="text-center">Bons Plans index</h1>
+    </div>
+
+    <div class="container">
+        <table class="zui-table zui-table-rounded mx-auto">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for good_deal in good_deals %}
+                <tr>
+                    <td>{{ good_deal.id }}</td>
+                    <td>{{ good_deal.title }}</td>
+                    <td>{{ good_deal.description }}</td>
+                    <td>
+                        <a href="{{ path('good_deal_edit', {'id': good_deal.id}) }}">éditer</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="w-100 text-center">
+        <a href="{{ path('good_deal_new') }}">
+            <button type="button" class="create_good_deal_button"><p>Créer un nouveau bon plan</p></button>
+        </a>
+    </div>
+{% endblock %}

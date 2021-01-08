@@ -1,0 +1,202 @@
+{% extends 'layout_visitor.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Nous Recrutons{% endblock %}
+
+{% block body %}
+
+    <section class="intro-recrutement">
+
+        <div class="jumbotron jumbotron-fluid mt-5 pt-5">
+            <div class="page-name container">
+                <h1 class="py-2 display-4"><img src="{{ asset('build/images/main/logo_no_back.png') }}" width=" 300em"
+                                                alt="RenovingHabitat"> recrute !</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="recruitment container-fluid">
+        <div class="panel justify-content-center pt-3">
+            <h3 class="col-md-12 text-center">Vous souhaitez travailler dans un domaine en forte croissance ?</h3>
+        </div>
+    </section>
+
+    <section class="container cards-recruitment pt-4">
+
+        <div class="row">
+            <div class="col text-center mb-3 mt-3">
+                <h4>Vous êtes spécialiste du ravalement, poseur ou technico-commercial ? <b>Rejoignez-nous !</b></h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="card-deck pt-1">
+                    <div class="card m-3">
+                        <img class="card-img-top" src="{{ asset('build/images/recrutment/poseur.png') }}"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Poseurs menuiserie et ravalement</h5>
+                            <p class="card-text"> Entreprise familiale, nous recherchons des collaborateurs pouvant
+                                s’inscrire dans la continuité de notre développement.</p>
+                            <p class="card-text">Afin de renforcer nos équipes de pose, nous recherchons des poseurs de
+                                menuiseries avec
+                                expérience confirmée ainsi que des spécialistes du ravalement.</p>
+                            <p class="card-text">
+                                Sur des chantiers en rénovation vous assurerez la
+                                pose de nos produits selon les règles de l’art et dans le respect des consignes (lecture
+                                de plans, de fiches d’intervention, respect des règles d’étanchéité et
+                                d’installation).</p>
+                            <p class="card-text">Vous veillerez à respecter la propreté des habitations à rénover. Vous
+                                serez amenés à
+                                effectuer certains travaux de réglages ou de SAV. </p>
+                            <p class="card-text">CDI<br>
+                                Possibilité d'évolution</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="card-text">PROFIL RECHERCHÉ : Permis B, dynamique, autonome,
+                                sérieux, soigné. Vous avez le souci du détail, et voulez contenter nos
+                                clients. Vous êtes une personne digne de confiance, motivée, et aimant travailler en
+                                équipe, rejoignez-nous !
+                                Cette embauche s'adresse à des personnes, hommes ou femmes, avec ou sans diplômes.
+                            </small>
+                        </div>
+                    </div>
+                    <div class="card m-3">
+                        <img class="card-img-top" src="{{ asset('build/images/recrutment/technico.jpg') }}"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Technico-commerciaux et prospecteurs</h5>
+                            <p class="card-text">Le monde de la vente vous intéresse ?<br>
+                                Vous aimez le contact ?<br>
+                                Vous souhaitez travailler dans un domaine en forte croissance ?</p>
+                            <p class="card-text">Spécialisé dans le B to C de produits et services destinés à
+                                l’amélioration de l'habitat.
+                                Dans le cadre de notre développement du 77, 78, 41, 91 et 92 nous recherchons de
+                                nouveaux
+                                technico-commerciaux et prospecteurs.</p>
+                            <p class="card-text">Votre mission sera de démarcher les propriétaires de maisons
+                                individuelles de plus de 10 ans.
+                                Nous vous proposons :</p>
+                            <p class="card-text">CDI<br>
+                                Formation complète<br>
+                                Possibilité d'évolution<br>
+                                Statut salarié comprenant : fixe/pourcentage/primes/challenge/frais.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="card-text">
+                                PROFIL RECHERCHÉ : Permis B, dynamique, rigoureux, animé d’un fort esprit d’équipe et le
+                                goût du challenge, ambitieux, travailleur, sérieux et motivé, rejoignez-nous !
+                                Cette embauche s'adresse à des personnes, hommes ou femmes, avec ou sans diplômes.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="recruitment container-fluid">
+        <div class="panel justify-content-center mt-5">
+            <h3 class="col-md-12 text-center">Candidatez en ligne en remplissant ce formulaire</h3>
+        </div>
+    </section>
+
+    <section class="form-recruitment">
+        <br>
+        <div class="text-center">
+            <div id="flashAnchor" class="bord mx-auto mt-4 mb-5">
+                <h2 class="pb-2 display-4">Mes informations</h2>
+            </div>
+        </div>
+        <div>
+            <p class="text-center requiredField"><span></span> Champs obligatoires</p>
+        </div>
+        {% for message in app.flashes('success-message') %}
+            <div class="alert alert-success text-center">
+                {{ message }}
+            </div>
+        {% endfor %}
+        <div class="container">
+            <div class="form-group">
+                {{ form_start(form,{'action': path('recruitment') ~ '#flashAnchor', 'method': 'POST'}) }}
+                <div>
+                    <h3>Coordonnées</h3>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-lg-6 requiredField">
+                        {{ form_label(form.lastname, 'Nom ' ) }}
+                        {{ form_widget(form.lastname) }}
+                    </div>
+                    <div class="col-lg-6 requiredField">
+                        {{ form_label(form.firstname, 'Prénom ' ) }}
+                        {{ form_widget(form.firstname) }}
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-lg-6 requiredField">
+                        {{ form_label(form.telephone, 'Téléphone ' ) }}
+                        {{ form_widget(form.telephone) }}
+                    </div>
+                    <div class="col-lg-6 requiredField">
+                        {{ form_label(form.email, 'Email ' ) }}
+                        {{ form_widget(form.email) }}
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <h3>Adresse</h3>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-lg-6 requiredField">
+                        {{ form_label(form.streetNumber, 'Numéro ' ) }}
+                        {{ form_widget(form.streetNumber) }}
+                    </div>
+                    <div class="col-lg-6 requiredField">
+                        {{ form_label(form.streetName, 'Rue ' ) }}
+                        {{ form_widget(form.streetName) }}
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-lg-6 requiredField">
+                        {{ form_label(form.city, 'Ville ' ) }}
+                        {{ form_widget(form.city) }}
+                    </div>
+                    <div class="col-lg-6 requiredField">
+                        {{ form_label(form.postCode, 'Code postal ' ) }}
+                        {{ form_widget(form.postCode) }}
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <h3>Informations métier</h3>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-lg-6 requiredField">
+                        {{ form_label(form.occupation, 'Sélectionnez votre métier ' ) }}
+                        {{ form_widget(form.occupation) }}
+                    </div>
+                    <div class="col-lg-6 requiredField">
+                        {{ form_label(form.area, 'Sélectionnez votre préférence ou disponibilité géographique ' ) }}
+                        {{ form_widget(form.area) }}
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-lg-6">
+                        <div class="requiredField">{{ form_label(form.cv, 'Joindre votre CV ' ) }}</div>
+                        {{ form_widget(form.cv) }}
+                    </div>
+                    <div class="col-lg-6 requiredField">
+                        {{ form_label(form.message, 'Votre message ' ) }}
+                        {{ form_widget(form.message) }}
+                    </div>
+                </div>
+                <button class="btn btn-success btn-admin">Envoyer</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('fix_upload') }}
+{% endblock %}

@@ -1,0 +1,61 @@
+{% for key, arr in data %}
+
+    {% if key == 'personal' %}
+
+        informations personnelles :
+        prénom : {{ arr.firstName }}
+        nom : {{ arr.lastName }}
+        email : {{ arr.email }}
+        adresse : {{ arr.address }}
+
+        message :
+        {{ arr.message }}
+    {% endif %}
+    {% if key == 'roofing' %}
+
+        Couverture :
+        tuiles cassées : {{ (arr.roofTiles == 1) ? 'oui' : 'non' }}
+        fuite d'eau : {{ (arr.waterLeak == 1) ? 'oui' : 'non' }}
+        présence de mousses/algues/champignons : {{ (arr.mosse == 1) ? 'oui' : 'non' }}
+        dernier traitement : {{ arr.lastTreatment }}
+    {% endif %}
+    {% if key == 'facade' %}
+
+        Ravalement :
+        salissure : {{ (arr.smear == 1) ? 'oui' : 'non' }}
+        décollement  : {{ (arr.peelingOff == 1) ? 'oui' : 'non' }}
+        remonté capillaire au niveau du sol  : {{ (arr.humidification == 1) ? 'oui' : 'non' }}
+        fissure présente depuis : {{ arr.cracksFrom }}
+        taille de la fissure : {{ arr.cracksSize }}
+    {% endif %}
+    {% if key == 'heating' %}
+
+        Chauffage :
+        remplacement total : {{ (arr.totalReplacement == 1) ? 'oui' : 'non' }}
+        entretient : {{ (arr.maintain == 1) ? 'oui' : 'non' }}
+        reparation : {{ (arr.reparation == 1) ? 'oui' : 'non' }}
+        type de chauffage : {{ arr.heatingType }}
+    {% endif %}
+    {% if key == 'earthwork' %}
+
+        Terrassement :
+        béton désactivé : {{ (arr.disabledConcrete == 1) ? 'oui' : 'non' }}
+        dalle de béton : {{ (arr.concreteSlab == 1) ? 'oui' : 'non' }}
+        carrelage : {{ (arr.floorTiles == 1) ? 'oui' : 'non' }}
+    {% endif %}
+    {% if key == 'housework' %}
+
+        Travaux Intérieur :
+        renovation : {{ (arr.renovation == 1) ? 'oui' : 'non' }}
+        tâches noires : {{ (arr.blackSpots == 1) ? 'oui' : 'non' }}
+        décollement papier peint : {{ (arr.paperPeelingOff == 1) ? 'oui' : 'non' }}
+    {% endif %}
+    {% if key == 'bathroom' %}
+
+        Salle de bain :
+        cabine de douche : {{ (arr.showerCabin == 1) ? 'oui' : 'non' }}
+        faience : {{ (arr.earthenware == 1) ? 'oui' : 'non' }}
+        carrelage : {{ (arr.floorTiles == 1) ? 'oui' : 'non' }}
+    {% endif %}
+
+{% endfor %}

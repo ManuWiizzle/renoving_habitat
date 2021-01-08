@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-xl fixed-top navbar-light">
+    <a class="navbar-brand" href="{{ path('index') }}"><img src="{{ asset('build/images/main/logo_no_back.png') }}" width=" 250em" alt="RenovingHabitat"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item {{ app.request.attributes.get('_route') == 'entreprise' ? 'active-link' }}">
+                <a class="nav-link" href="{{ path('entreprise') }}">Notre entreprise</a>
+            </li>
+            <li class="nav-item  {{ app.request.attributes.get('_route') == 'nos_real' ? 'active-link' }}">
+                <a class="nav-link" href="{{ path('nos_real') }}">Nos réalisations</a>
+            </li>
+            <li class="nav-item dropdown nos_real
+                {{
+                app.request.attributes.get('_route') == 'coverage_index' ? 'active-link' :
+                app.request.attributes.get('_route') == 'insulation_index' ? 'active-link' :
+                app.request.attributes.get('_route') == 'indoor_index' ? 'active-link' :
+                app.request.attributes.get('_route') == 'cleaning_index' ? 'active-link' :
+                app.request.attributes.get('_route') == 'carpentry_index' ? 'active-link' :
+                app.request.attributes.get('_route') == 'earthwork_index' ? 'active-link'
+                }}">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Je renov'
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                    <a class="dropdown-item" href="{{ path('coverage_index') }}">Couverture</a>
+                    <a class="dropdown-item" href="{{ path('insulation_index') }}">Isolation</a>
+                    <a class="dropdown-item" href="{{ path('indoor_index') }}">Interieur</a>
+                    <a class="dropdown-item" href="{{ path('cleaning_index') }}">Ravalement</a>
+                    <a class="dropdown-item" href="{{ path('carpentry_index') }}">Menuiserie</a>
+                    <a class="dropdown-item" href="{{ path('earthwork_index') }}">Aménagement extérieur</a>
+
+                </div>
+            </li>
+            <li class="nav-item {{ app.request.attributes.get('_route') == 'projet' ? 'active-link' }}">
+                <a class="nav-link" href="{{ path('projet') }}"><b>Mon projet en ligne</b></a>
+            </li>
+        </ul>
+    </div>
+</nav>

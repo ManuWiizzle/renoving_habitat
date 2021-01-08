@@ -1,0 +1,169 @@
+@import "vars";
+@import "app";
+@import "~bootstrap/scss/bootstrap";
+
+footer {
+
+  width: 100%;
+  margin-top: 3em;
+  background-color: $light-brand-color;
+  box-shadow: -2px -7px 29px -5px $shadow;
+
+  ul {
+    list-style-type: none;
+  }
+
+  .footer_left_list,
+  .footer_right_list {
+    display: block;
+    margin-left: 10%;
+  }
+
+  .footer_left_list {
+    text-align: left;
+  }
+  .footer_right_list {
+    text-align: right;
+    padding-right: 4em;
+  }
+
+  img {
+    width: 90%;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a{
+    font-size: 1.3em;
+    color: $dark-color;
+  }
+
+  li {
+
+    a {
+      color: $darker-secondary-color;
+      padding-left: 1em;
+    }
+
+    p {
+      padding-left: 1em;
+      font-size: 1.3em;
+      color: $darker-secondary-color;
+    }
+
+    span {
+      text-transform: uppercase;
+    }
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 1.9em;
+
+    height: 100%;
+    width: 25em;
+
+    cursor: pointer;
+    user-select: none;
+
+    background: $transparent;
+
+    text-align: left;
+    line-height: 1.5em;
+  }
+  li::before {
+    content: '';
+    position: absolute;
+    display: block;
+
+    bottom: 0;
+    right: -1.5em;
+
+    width: 0;
+    height: 2.6em;
+
+    border-top: 2.5em solid $transparent;
+    border-left: 1.9em solid $transparent;
+  }
+  li::after {
+    content: '';
+    position: absolute;
+    display: block;
+
+    top: 0;
+    left: -1.9em;
+
+    width: 0;
+    height: 2.6em;
+
+    border-top: 2.5em solid $transparent;
+    border-left: 1.9em solid $transparent;
+  }
+
+  li:hover {
+    background: $brand-color;
+    a {
+      color: $secondary-color;
+    }
+    p {
+      color: $secondary-color;
+    }
+
+  }
+  li:hover::after {
+    border-top: 2.5em solid $brand-color;
+    border-right: 1.563em solid $transparent;
+  }
+  li:hover::before {
+    border-top: 2.5em solid $transparent;
+    border-left: 1.563em solid $brand-color;
+  }
+
+  @media (max-width: 1000px) {
+    .footer_right_list,
+    .footer_left_list {
+      text-align: center;
+    }
+    .footer_right_list{
+      padding-right: 0;
+    }
+    li {
+      width: 20em;
+    }
+    a {
+      font-size: 1em;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .first {
+      order: 1;
+    }
+    .second {
+      order: 3;
+    }
+    .third {
+      order: 2;
+    }
+  }
+  .signature {
+    p {
+      text-align: center;
+      color: $secondary-color;
+      font-size: 1em;
+      a {
+        color: $secondary-color;
+        text-decoration: none;
+        font-size: 1em;
+      }
+      a:hover {
+        transition: .2s;
+        color: $brand-color;
+        font-style: oblique;
+      }
+    }
+  }
+}

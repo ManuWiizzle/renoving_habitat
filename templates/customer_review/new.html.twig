@@ -1,0 +1,15 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block title %}Créer un nouveau avis client{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <div class="h1_title_container mx-auto mt-100px mb-5">
+        <h1 class="text-center">Créer un nouveau avis client</h1>
+    </div>
+
+    {{ include('customer_review/_form.html.twig') }}
+
+    <a href="{{ path('customer_review_index') }}">back to list</a>
+    </div>
+{% endblock %}

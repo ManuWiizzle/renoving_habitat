@@ -1,0 +1,38 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block header %}
+    {% include 'admin/nav.html.twig' %}
+{% endblock header %}
+{% block body %}
+    <h1>admin page</h1>
+    <div class="container mx-auto admin_categ_container">
+        <div class="row mx-auto">
+            <div class="col-6">
+                <div class="admin_categ_wrapper text-center mx-auto">
+                    <div class="w-100">
+                        <a href="{{ path('good_deal_index') }}">
+                            <div class="admin_categ_content">
+                                <i class="fas fa-euro-sign admin_categ_item"></i>
+                                <p class="admin_categ_text mt-5">Modifier les bons plans</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="admin_categ_wrapper text-center mx-auto">
+                    <div class="w-100">
+                        <a href="{{ path('customer_review_index') }}">
+                            <div class="admin_categ_content">
+                                <i class="far fa-comment-alt admin_categ_item"></i>
+                                <p class="admin_categ_text mt-5">Modifier les commentaires clients</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
+{% block footer %}
+{% endblock footer %}

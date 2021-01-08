@@ -1,0 +1,61 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <footer class="py-5 px-3">
+        <div class="mp-0">
+            <div class="row d-flex flex-wrap justify-content-around">
+                <div class="col-md">
+                    <div class="first footer_left_list">
+                        <ul class="p-0">
+                            <li class="p-2">
+                                <a href="{{ path('entreprise') }}" class="footer_links stretched-link">A propos de
+                                    nous</a>
+                            </li>
+                            <li class="p-2">
+                                <a href="{{ path('coverage_index') }}" class="footer_links stretched-link">Je rénov'</a>
+                            </li>
+                            <li class="p-2">
+                                <a href="{{ path('projet') }}" class="footer_links stretched-link"><b>Mon projet en
+                                        ligne</b></a>
+                            </li>
+                            <li class="p-2">
+                                <a href="{{ path('nos_real') }}" class="footer_links stretched-link">Nos réalisations</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="second align-self-center col-md">
+                    <a class="logo" href="{{ path('index') }}"><img
+                                src="{{ asset('build/images/main/logo_no_back.png') }}" alt="RenovingHabitat"></a>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="third footer_right_list">
+                        <ul class="p-0">
+                            <li class="p-2">
+                                <a href="{{ path('recruitment') }}" class="footer_links stretched-link"><span>nous recrutons</span></a>
+                            </li>
+                            <li class="p-2">
+                                <a href="{{ path('cgvu') }}" class="footer_links stretched-link">Conditions Générales de
+                                    Vente</a>
+                            </li>
+                            <li class="p-2">
+                                <a href="mailto:renoving3a@gmail.com?subject=Demande d'information Renoving"
+                                   class="footer_links stretched-link">renoving3a@gmail.com</a>
+                            </li>
+                            <li class="p-2">
+                                <p class="footer_links stretched-link">06 61 66 14 01</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="signature py-3">
+            <p> Créé par <a href="https://www.linkedin.com/in/jaffar-mallem/" target="_blank">Jaffar</a>, <a href="https://www.linkedin.com/in/angel-rion-cervi-034253147/" target="_blank">Angel</a>, <a href="https://www.linkedin.com/in/manuel-leger-171905185/" target="_blank">Manuel</a> et <a href="https://www.linkedin.com/in/vanina-diot/" target="_blank">Vanina</a> de la <a href="https://wildcodeschool.fr" target="_blank">Wild Code School</a>.
+            </p>
+        </div>
+    </footer>
+{% endblock %}

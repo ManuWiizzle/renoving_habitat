@@ -1,0 +1,189 @@
+@import '_vars';
+
+.navbar {
+  background-color: $primary-color;
+  padding-bottom: 0;
+  padding-top: 0;
+  box-shadow: 0 1px 10px $shadow;
+
+  .navbar-light {
+    color: $darker-secondary-color;
+  }
+
+  li {
+
+    a {
+      color: $darker-secondary-color;
+      padding-bottom: 0.4em;
+      font-size: 1.2em;
+      padding-top: 0.43em;
+    }
+
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 3em;
+
+    height: 100%;
+    width: 14.5em;
+
+    cursor: pointer;
+    user-select: none;
+
+    background: $secondary-color;
+
+    text-align: center;
+    line-height: 2.5em;
+  }
+  li::before {
+    content: '';
+    position: absolute;
+    display: block;
+
+    right: -2.5em;
+
+    width: 0;
+    height: 0;
+
+    border-top: 3.5em solid $transparent;
+    border-left: 2.563em solid $secondary-color;
+  }
+
+  .active-link::before {
+    content: '';
+    position: absolute;
+    display: block;
+
+    right: -2.5em;
+
+    width: 0;
+    height: 0;
+
+    border-top: 3.5em solid $transparent;
+    border-left: 2.563em solid $brand-color;
+  }
+  .active-link {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 3em;
+
+    height: 100%;
+    width: 14.5em;
+
+    cursor: pointer;
+    user-select: none;
+
+    background: $brand-color;
+
+    text-align: center;
+    line-height: 2.5em;
+  }
+
+  li::after {
+    content: '';
+    position: absolute;
+    display: block;
+
+    top: 0;
+    left: -2.5em;
+
+    width: 0;
+    height: 0;
+
+    border-top: 3.5em solid $secondary-color;
+    border-left: 2.563em solid $transparent;
+  }
+
+  .active-link::after {
+    content: '';
+    position: absolute;
+    display: block;
+
+    top: 0;
+    left: -2.5em;
+
+    width: 0;
+    height: 0;
+
+    border-top: 3.5em solid $brand-color;
+    border-left: 2.563em solid $transparent;
+  }
+
+  /* Hover */
+
+  li:hover {
+    background: $brand-color;
+  }
+
+  li:hover > a {
+    color: $white !important;
+  }
+
+  a:hover{
+    color: $white !important;
+  }
+
+  li:hover::after {
+    border-top: 3.5em solid $brand-color;
+    border-right: 2.563em solid $transparent;
+    z-index: -1;
+  }
+  li:hover::before {
+    border-top: 3.5em solid $transparent;
+    border-left: 2.563em solid $brand-color;
+    z-index: -1;
+  }
+
+  .dropdown-menu {
+    width: 17em;
+    .dropdown-item {
+      color: $darker-secondary-color;
+    }
+    :hover {
+      background-color: $brand-color;
+    }
+  }
+
+  .navbar-toggler {
+    border: 2px solid $brand-color;
+    background-image: linear-gradient(to bottom left, $primary-color, $brand-color);
+    padding: 0;
+
+    :hover {
+      background-color: $white;
+    }
+
+    span {
+      padding: 5px;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    li {
+      width: 13em;
+    }
+    .dropdown-menu {
+      width: 14.5em;
+    }
+  }
+  @media (max-width: 1200px) {
+    .nav-item {
+      background-color: $primary-color;
+      width: 100%;
+      position: relative;
+    }
+
+    .dropdown-menu {
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav-item::before {
+      display: none;
+    }
+    .nav-item::after {
+      display: none;
+    }
+  }
+}

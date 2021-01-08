@@ -1,0 +1,115 @@
+{% extends 'layout_visitor.html.twig' %}
+
+{% block body %}
+    <section class="intro-realisation">
+
+        <div class="jumbotron jumbotron-fluid mt-5 pt-5">
+            <div class="page-name container">
+                <h1 class="py-2 display-4">Nos réalisations</h1>
+            </div>
+        </div>
+    </section>
+    
+    <section class="rea-title">
+        <div class="container-fluid mt-5">
+            <div class="bord mx-auto mt-2 mb-5">
+                <h2 class="pb-2 display-4">Galerie photos</h2>
+            </div>
+            <div class="realisation_main_text px-sm-5">
+                <p class="text-center">
+                    Voici quelques-unes de nos réalisations, cliquez sur la catégorie de votre choix pour en voir
+                    plus...
+                </p>
+            </div>
+            <div class="work_categories_container">
+                <div class="row main_categories_row p-0 mt-5">
+                    <div class="col-lg-4 text-center p-0">
+                        <a class="p-0 modal_link" data-toggle="modal" data-target=".bs-modal-lg-toiture">
+                            <div class="work_categories_img_container">
+                                <img class="work_categories_img"
+                                     src="{{ asset('build/images/nos_real_categories/tuiles.jpg') }}" alt="toiture">
+                                <p class="mosaique_title">Toiture</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 text-center p-0">
+                        <a class="p-0 modal_link" data-toggle="modal" data-target=".bs-modal-lg-chauffage">
+                            <div class="work_categories_img_container">
+                                <img class="work_categories_img"
+                                     src="{{ asset('build/images/nos_real_categories/chauffage.jpg') }}"
+                                     alt="chauffage">
+                                <p class="mosaique_title">Electricité</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 text-center p-0">
+                        <a class="p-0 modal_link" data-toggle="modal" data-target=".bs-modal-lg-ravalement">
+                            <div class="work_categories_img_container">
+                                <img class="work_categories_img"
+                                     src="{{ asset('build/images/nos_real_categories/ravalement.jpg') }}"
+                                     alt="ravalement">
+                                <p class="mosaique_title">Ravalement</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row main_categories_row p-0">
+                    <div class="col-lg-4 text-center p-0">
+                        <a class="p-0 modal_link" data-toggle="modal" data-target=".bs-modal-lg-salle-de-bain">
+                            <div class="work_categories_img_container">
+                                <img class="work_categories_img"
+                                     src="{{ asset('build/images/nos_real_categories/salle_de_bain.jpg') }}"
+                                     alt="salle de bain">
+                                <p class="mosaique_title">Salle de bain</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 text-center p-0">
+                        <a class="p-0 modal_link" data-toggle="modal" data-target=".bs-modal-lg-travaux-interieur">
+                            <div class="work_categories_img_container">
+                                <img class="work_categories_img"
+                                     src="{{ asset('build/images/nos_real_categories/travaux_interieur.jpg') }}"
+                                     alt="travaux intérieur">
+                                <p class="mosaique_title">Travaux intérieurs</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 text-center p-0">
+                        <a class="p-0 modal_link" data-toggle="modal" data-target=".bs-modal-lg-terrassement">
+                            <div class="work_categories_img_container">
+                                <img class="work_categories_img"
+                                     src="{{ asset('build/images/nos_real_categories/terrassement.jpg') }}"
+                                     alt="terrassement">
+                                <p class="mosaique_title">Aménagement extérieur</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rea-review">
+        <div class="client_container">
+            <div class="bord-bis mx-auto mt-2 mb-5">
+                <h2 class="pb-2 display-4">Ce que nos clients pensent de nous</h2>
+            </div>
+            <div class="row">
+                {% for i in 0..3 %}
+                    {% if customer_review[i] is defined %}
+                        <div class="col-sm-4">
+                            <div class="cust_review_container">
+                                <p class="client_react">
+                                    {{ customer_review[i].review }}
+                                </p>
+                                <p class="client_id">
+                                    {{ customer_review[i].firstname }} {{ customer_review[i].lastname }}
+                                </p>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% include 'nos_realisations/modals.html.twig' %}
+{% endblock body %}

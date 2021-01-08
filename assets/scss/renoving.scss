@@ -1,0 +1,279 @@
+.renov-title {
+  .bord {
+    border-left: none;
+    border-top: none;
+    border-right: 2px solid $darker-secondary-color;
+    border-bottom: 2px solid $darker-secondary-color;
+    transform: skew(25deg);
+    width: 40%;
+    justify-content: center;
+
+    h2 {
+      font-size: 2.5em;
+      color: $darker-secondary-color;
+      text-align: center;
+      transform: skew(-25deg);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .bord {
+      width: 90%;
+      border-right: none;
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+
+  }
+}
+
+.list {
+  list-style: none !important;
+}
+.sentence_intro{
+ font-style: italic;
+}
+
+.intro-renoving {
+  text-align: left;
+  margin-top: 4.55em;
+
+  .page-name {
+    margin-top: 2em;
+  }
+
+  #background_cov {
+    background-image: url("../images/je_renov_images/coverage.jpg");
+    background-attachment: fixed;
+    height: 50vh;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    background-position: top;
+    background-size: cover;
+  }
+
+  #background_carp {
+    background-image: url("../images/je_renov_images/carpentry.jpg");
+    background-attachment: fixed;
+    height: 50vh;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    background-position: top;
+    background-size: cover;
+  }
+
+  #background_rav {
+    background-image: url("../images/je_renov_images/wall.jpg");
+    background-attachment: fixed;
+    height: 50vh;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    background-position: top;
+    background-size: cover;
+  }
+
+  #background_ter {
+    background-image: url("../images/je_renov_images/terrassement.jpg");
+    background-attachment: fixed;
+    height: 50vh;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    background-position: top;
+    background-size: cover;
+  }
+
+  #background_iso {
+    background-image: url("../images/je_renov_images/isolation.jpg");
+    background-attachment: fixed;
+    height: 50vh;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    background-position: top;
+    background-size: cover;
+  }
+
+  #background_int {
+    background-image: url("../images/je_renov_images/indoor.jpg");
+    background-attachment: fixed;
+    height: 50vh;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    background-position: top;
+    background-size: cover;
+  }
+
+  h1 {
+    color: $brand-color;
+    font-variant: small-caps;
+    text-align: center;
+    margin-top: 3.5em;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 3px;
+    text-shadow: 2px 3px 2px $shadow;
+  }
+}
+
+.first_title {
+  margin-right: 3em;
+  position: relative;
+  float: right;
+  color: $brand-color;
+  font-size: 5em;
+  text-transform: uppercase;
+}
+
+.guaranty {
+  background-color: $brand-color;
+  color: $white;
+  font-size: 1em;
+  height: 5em;
+  text-transform: uppercase;
+
+
+}
+
+.paragraph {
+  margin-bottom: 1em;
+  background-color: $white;
+  padding: 1em;
+  color: $dark-color;
+  font-size: larger;
+
+}
+
+.carousel_img {
+  height: 30em;
+  width: 30em;
+  object-fit: cover;
+}
+
+.card {
+  width: 100%;
+  margin: auto;
+}
+
+.card-img {
+  object-fit: cover;
+  height: 100%;
+  min-height: 20em;
+
+}
+
+.card-title {
+  text-decoration: underline;
+  color: $brand-color;
+
+
+}
+
+.bg_card_cov {
+  background-image: url("../images/je_renov_images/background_card.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3em;
+
+
+}
+
+#bg_card_carp {
+  background-image: url("../images/je_renov_images/bg_card_carp.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3em;
+}
+
+#bg_card_rav {
+  background-image: url("../images/je_renov_images/bg_wall.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3em;
+}
+
+#bg_card_ter {
+  background-image: url("../images/je_renov_images/bg_terrassement.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3em;
+}
+
+#bg_card_iso {
+  background-image: url("../images/je_renov_images/bg_iso.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3em;
+}
+
+#bg_card_indoor {
+  background-image: url("../images/je_renov_images/bg_indoor.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3em;
+}
+
+.renov-button {
+  .button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    height: 3em;
+    width: 15em;
+    border: none;
+    border-radius: 3px;
+    background-color: $brand-color;
+    color: $white;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 1.5em;
+    box-shadow: 1px 2px $shadow;
+  }
+
+  .button:hover {
+    background-color: $white;
+    text-decoration: none;
+    color: $brand-color;
+  }
+  @media screen and (max-width: 400px) {
+    .button {
+      font-size: 1em;
+    }
+  }
+}
+
+.circle {
+  margin: 36px;
+  display: flex;
+  padding: 16px;
+  text-align: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px solid $white;
+  position: relative;
+  background-color: $transparent;
+  line-height: 50px;
+}
+
+.row_circle {
+  margin-top: 0;
+  background-color: $brand-color;
+  padding: 2em;
+}
+
+.img_circle {
+  object-fit: cover;
+  margin: auto;
+  width: -moz-available;
+}
+
+.text_circle {
+  font-size: larger;
+  color: $white;
+}
+
+.section_circle {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}

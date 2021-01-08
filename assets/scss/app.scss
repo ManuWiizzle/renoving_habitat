@@ -1,0 +1,45 @@
+@import "_vars";
+@import "home_map";
+@import "~bootstrap/scss/bootstrap";
+@import "mon_projet";
+@import '~font-awesome/scss/font-awesome.scss';
+@import "homepage";
+@import "entreprise";
+@import "navbar";
+@import "recrutment";
+@import "CGVU";
+@import "admin/admin";
+@import "admin/nav";
+@import "~tooltipster/dist/css/tooltipster.bundle";
+@import "~juxtaposejs/build/css/juxtapose";
+@import "~leaflet/dist/leaflet.css";
+@import "nos_realisations";
+@import "renoving";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Patrick+Hand|Roboto+Condensed&display=swap');
+
+
+body {
+    background-color: $primary-color;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+h2 {
+  font-variant: small-caps;
+  color: $darker-secondary-color;
+}
+
+a {
+    color: $brand-color;
+}
+
+.custom-file-label::after{
+     content: "Parcourir";
+ }
+
+@media (max-width: 768px) {
+  p {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+}
