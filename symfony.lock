@@ -78,6 +78,9 @@
     "egulias/email-validator": {
         "version": "2.1.7"
     },
+    "friendsofphp/proxy-manager-lts": {
+        "version": "v1.0.2"
+    },
     "jms/metadata": {
         "version": "2.4.0"
     },
