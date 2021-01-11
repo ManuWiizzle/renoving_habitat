@@ -18,7 +18,7 @@ class HomeController extends AbstractController
      * @return Response
      */
 
-    public function index(SiteRepository $siteRepository, SerializerInterface $serializer): Response
+    public function indexSite(SiteRepository $siteRepository, SerializerInterface $serializer): Response
     {
         $good_deal = $this->getDoctrine()
             ->getRepository(GoodDeal::class)
