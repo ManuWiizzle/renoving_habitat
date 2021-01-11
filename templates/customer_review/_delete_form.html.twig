@@ -1,6 +1,6 @@
-<form method="post" class="gooddeal_delete_form mx-auto mt-4" action="{{ path('customer_review_delete', {'id': customer_review.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+<form method="post" class="gooddeal_delete_form mx-auto mt-4" action="{{ path('customer_review_delete', {'id': customer_review.id}) }}" onsubmit="return confirm('Etes-vous sur de vouloir supprimer cet article?');">
     <input type="hidden" name="_method" value="DELETE">
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ customer_review.id) }}">
-    <button class="sendButtonRed">Delete</button>
+    <button class="sendButtonRed">Supprimer</button>
 </form>
 

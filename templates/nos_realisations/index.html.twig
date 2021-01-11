@@ -102,13 +102,15 @@
                                     {{ customer_review[i].review }}
                                 </p>
                                 <p class="client_id">
-                                    {{ customer_review[i].firstname }} {{ customer_review[i].lastname }}
+                                    {{ customer_review[i].firstname }} 
                                 </p>
                             </div>
                         </div>
                     {% endif %}
                 {% endfor %}
+                
             </div>
+            
         </div>
     </section>
     {% include 'nos_realisations/modals.html.twig' %}

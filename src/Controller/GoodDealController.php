@@ -13,7 +13,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 /**
  * @Route("/good/deal")
- * @IsGranted("ROLE_ADMIN")
  */
 class GoodDealController extends AbstractController
 {

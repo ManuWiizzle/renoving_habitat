@@ -13,7 +13,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 /**
  * @Route("/customer/review")
- * @IsGranted("ROLE_ADMIN")
  */
 class CustomerReviewController extends AbstractController
 {

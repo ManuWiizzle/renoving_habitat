@@ -3,9 +3,16 @@
 {% block title %}New City{% endblock %}
 
 {% block body %}
-    <h1>Create new City</h1>
+<div class="container">
+    
+<div class="h1_title_container mx-auto mt-100px mb-5">
+        <h1 class="text-center">Ajouter de nouvelles villes</h1>
+    </div>
 
     {{ include('city/_form.html.twig') }}
 
-    <a href="{{ path('city_index') }}">back to list</a>
+    <a href="{{ path('city_index') }}">Retour à la liste</a>
+    
+</div>
+    
 {% endblock %}

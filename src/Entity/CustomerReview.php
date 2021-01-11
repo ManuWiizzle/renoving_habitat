@@ -31,6 +31,11 @@ class CustomerReview
      */
     private $review;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $email;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +73,17 @@ class CustomerReview
     public function setReview(string $review): self
     {
         $this->review = $review;
+
+        return $this;
+    }
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
 
         return $this;
     }

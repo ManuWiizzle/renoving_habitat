@@ -4,7 +4,7 @@
 
 {% block body %}
     <div class="h1_title_container mx-auto mt-100px mb-5">
-        <h1 class="text-center">Bons Plans index</h1>
+        <h1 class="text-center">Bons Plans</h1>
     </div>
 
     <div class="container">
@@ -24,12 +24,14 @@
                     <td>{{ good_deal.title }}</td>
                     <td>{{ good_deal.description }}</td>
                     <td>
-                        <a href="{{ path('good_deal_edit', {'id': good_deal.id}) }}">éditer</a>
+                        <a href="{{ path('good_deal_edit', {'id': good_deal.id}) }}">Modifier</a>
+                        <a href="{{ path('good_deal_delete', {'id': good_deal.id}) }}">Supprimer</a>
+                        
                     </td>
                 </tr>
             {% else %}
                 <tr>
-                    <td colspan="4">no records found</td>
+                    <td colspan="4">Aucun bon plan n'est enregistré</td>
                 </tr>
             {% endfor %}
             </tbody>

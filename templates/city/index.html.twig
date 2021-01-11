@@ -3,13 +3,17 @@
 {% block title %}City index{% endblock %}
 
 {% block body %}
-    <h1>City index</h1>
 
-    <table class="table">
+    <div class="h1_title_container mx-auto mt-100px mb-5">
+        <h1 class="text-center">Liste des villes</h1>
+    </div>
+
+    <div class="container">
+        <table class="zui-table zui-table-rounded mx-auto">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
+               
+                <th>Noms</th>
                 <th>Longitude</th>
                 <th>Latitude</th>
                 <th>actions</th>
@@ -18,13 +22,13 @@
         <tbody>
         {% for city in cities %}
             <tr>
-                <td>{{ city.id }}</td>
+                
                 <td>{{ city.name }}</td>
                 <td>{{ city.longitude }}</td>
                 <td>{{ city.latitude }}</td>
                 <td>
-                    <a href="{{ path('city_show', {'id': city.id}) }}">show</a>
-                    <a href="{{ path('city_edit', {'id': city.id}) }}">edit</a>
+                    <a href="{{ path('city_show', {'id': city.id}) }}">Afficher</a>
+                    <a href="{{ path('city_edit', {'id': city.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -34,6 +38,8 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('city_new') }}">Create new</a>
+</div>
+<div class="w-100 text-center">
+    <a href="{{ path('city_new') }}">Ajouter de nouvelles villes</a>
+</div>    
 {% endblock %}

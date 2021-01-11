@@ -13,6 +13,12 @@
         <div>
             {{ form_widget(form.lastname, { 'attr': {'class': 'title_input_gooddeal form-control mx-auto'} }) }}
         </div>
+        <div class="form_edit_label">
+            {{ form_label(form.email, 'Email') }}
+        </div>
+        <div>
+            {{ form_widget(form.email, { 'attr': {'class': 'title_input_gooddeal form-control mx-auto'} }) }}
+        </div>
     </div>
     <div class="form_edit_text_container my-3">
         <div class="form_edit_label">
@@ -22,6 +28,11 @@
             {{ form_widget(form.review, { 'attr': {'class': 'form-control mx-auto', 'rows': '2'} }) }}
         </div>
     </div>
+    <div>
+  <input type="checkbox" id="scales" name="scales"
+         checked>
+  <label for="scales">J'accepte que mes données personnelles saisies dans ce formulaire soient utilisées dans le cas d'une prise de contact</label>
+</div>
     {{ form_end(form) }}
-    <button type="submit" form="edit_form_customer_review" class="sendButtonGreen">{{ button_label|default('Save') }}</button>
+    <button type="submit" form="edit_form_customer_review" class="sendButtonGreen">{{ button_label|default('Envoyer') }}</button>
 </div>

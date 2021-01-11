@@ -1,10 +1,10 @@
 {% extends 'layout_admin.html.twig' %}
 
-{% block title %}CustomerReview index{% endblock %}
+{% block title %}Avis clients{% endblock %}
 
 {% block body %}
     <div class="h1_title_container mx-auto mt-100px mb-5">
-        <h1 class="text-center">Avis clients index</h1>
+        <h1 class="text-center">Avis clients</h1>
     </div>
 
     <div class="container">
@@ -12,9 +12,10 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Review</th>
+                <th>Prenom</th>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Contenu de l'avis</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -24,23 +25,19 @@
                 <td>{{ customer_review.id }}</td>
                 <td>{{ customer_review.firstname }}</td>
                 <td>{{ customer_review.lastname }}</td>
+                <td>{{ customer_review.email }}</td>
                 <td>{{ customer_review.review }}</td>
                 <td>
-                    <a href="{{ path('customer_review_edit', {'id': customer_review.id}) }}">edit</a>
+                    {{ include('customer_review/_delete_form.html.twig') }}
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5">Aucunes informations trouvées</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
     </div>
 
-    <div class="w-100 text-center">
-        <a href="{{ path('customer_review_new') }}">
-            <button type="button" class="create_good_deal_button"><p>Créer un nouveau avis client</p></button>
-        </a>
-    </div>
 {% endblock %}
