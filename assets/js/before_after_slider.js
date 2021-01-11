@@ -1,18 +1,15 @@
-let beforeArray =
-    [
-        require('../images/homepage/imgbf1_1.jpeg'),
-        require('../images/homepage/imgbf2_1.png'),
-        require('../images/homepage/imgbf3_1.jpg'),
-        require('../images/homepage/imgbf4_1.jpg'),
-    ];
-
-let afterArray =
-    [
-        require('../images/homepage/imgbf1_2.jpeg'),
-        require('../images/homepage/imgbf2_2.jpeg'),
-        require('../images/homepage/imgbf3_2.jpg'),
-        require('../images/homepage/imgbf4_2.jpg'),
-    ];
+let beforeImage = JSON.parse(siteImage.dataset.before);
+let afterImage = JSON.parse(siteImage.dataset.final);
+let beforeArray = [];
+beforeImage.forEach(function (image) {
+    beforeArray.push('images/site/' + image.imageName,
+    );
+});
+let afterArray = [];
+afterImage.forEach(function (image) {
+    afterArray.push('images/site/' + image.imageName
+    );
+});
 
 let photoArrayIndex = 0;
 
@@ -23,17 +20,17 @@ document.getElementById("prevImageButton").addEventListener("click", () => {
     switchImage('prev')
 });
 
-function switchImage(direction){
-    if(direction === 'next'){
-        if(photoArrayIndex === beforeArray.length - 1){
+function switchImage(direction) {
+    if (direction === 'next') {
+        if (photoArrayIndex === beforeArray.length - 1) {
             photoArrayIndex = 0;
-        }else{
+        } else {
             photoArrayIndex++;
         }
-    }else{
-        if(photoArrayIndex === 0){
+    } else {
+        if (photoArrayIndex === 0) {
             photoArrayIndex = beforeArray.length - 1;
-        }else{
+        } else {
             photoArrayIndex--;
         }
     }
@@ -41,12 +38,12 @@ function switchImage(direction){
     refreshSlider();
 }
 
-function removeElem(){
+function removeElem() {
     let elem = document.getElementsByClassName('jx-slider')[0];
     elem.parentNode.removeChild(elem);
 }
 
-function refreshSlider(){
+function refreshSlider() {
     slider = new juxtapose.JXSlider('#slider',
         [
             {

@@ -1,0 +1,42 @@
+{% extends 'layout_admin.html.twig' %}
+
+{% block title %}Photos{% endblock %}
+
+{% block body %}
+    <div class="h1_title_container mx-auto mt-100px mb-5">
+        <h1 class="text-center">Photos</h1>
+    </div>
+
+    <div class="container">
+        <table class="zui-table zui-table-rounded mx-auto">
+        <thead>
+            <tr>
+                
+                <th>Nom de la photo</th>
+                <th>Place</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for site in sites %}
+            <tr>
+                
+                <td>{{ site.name }}</td>
+                <td>{{ site.place }}</td>
+                <td>
+                    <a href="{{ path('site_show', {'id': site.id}) }}">Afficher</a>
+                    <a href="{{ path('site_edit', {'id': site.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">Aucune photos enregistrées</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+    </div>
+    <div class="w-100 text-center">
+        <a href="{{ path('site_new') }}">Ajouter des nouvelles photos</a>
+    </div>
+{% endblock %}
