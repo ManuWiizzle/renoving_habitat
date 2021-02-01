@@ -14,7 +14,7 @@ class BeginSiteType extends AbstractType
     {
         $builder
             ->add('imageFile', VichImageType::class, [
-                'label'=>'Image1(2Mo maxi)',
+                'label'=>'Image1(2Mo max)',
                 'allow_delete' => false,
                 'download_uri' => false,
                 'required' => false,

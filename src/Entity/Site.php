@@ -21,8 +21,8 @@ class Site
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\Length(max = 255, maxMessage="Veuillez limiter ce champs à 255 caractères")
+     * @ORM\Column(type="string", length=60)
+     * @Assert\Length(max = 60, maxMessage="Veuillez limiter ce champs à 60 caractères")
      */
     private $name;
 

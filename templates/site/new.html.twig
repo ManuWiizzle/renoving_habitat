@@ -1,11 +1,16 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout_admin.html.twig' %}
 
-{% block title %}New Site{% endblock %}
+{% block title %}Photos{% endblock %}
 
 {% block body %}
-    <h1>Create new Site</h1>
 
+<div class="container">
+
+    <div class="h1_title_container mx-auto mt-100px mb-5">
+        <h1 class="text-center">Ajout des photos</h1>
+    </div>
     {{ include('site/_form.html.twig') }}
 
-    <a href="{{ path('site_index') }}">back to list</a>
+    <a href="{{ path('site_index') }}">Retour à la liste</a>
+</div>    
 {% endblock %}

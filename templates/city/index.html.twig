@@ -1,6 +1,6 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout_admin.html.twig' %}
 
-{% block title %}City index{% endblock %}
+{% block title %}Villes{% endblock %}
 
 {% block body %}
 
@@ -33,7 +33,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5">Aucune ville n'a été enregistrée</td>
             </tr>
         {% endfor %}
         </tbody>

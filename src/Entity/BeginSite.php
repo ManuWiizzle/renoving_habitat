@@ -42,7 +42,7 @@ class BeginSite
      * @ORM\Column(type="datetime")
      * @var \DateTime
      */
-    private $updatedAt;
+    public $updatedAt;
 
     /**
      * @ORM\OneToOne(targetEntity="App\Entity\Site", mappedBy="beginSite", cascade={"persist", "remove"})

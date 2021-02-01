@@ -49,27 +49,7 @@ class CustomerReviewController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}/edit", name="customer_review_edit", methods={"GET","POST"})
-     */
-    public function edit(Request $request, CustomerReview $customerReview): Response
-    {
-        $form = $this->createForm(CustomerReviewType::class, $customerReview);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('customer_review_index', [
-                'id' => $customerReview->getId(),
-            ]);
-        }
-
-        return $this->render('customer_review/edit.html.twig', [
-            'customer_review' => $customerReview,
-            'form' => $form->createView(),
-        ]);
-    }
+    
 
     /**
      * @Route("/{id}", name="customer_review_delete", methods={"DELETE"})
@@ -85,3 +65,4 @@ class CustomerReviewController extends AbstractController
         return $this->redirectToRoute('customer_review_index');
     }
 }
+

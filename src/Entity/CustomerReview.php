@@ -17,12 +17,12 @@ class CustomerReview
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=60)
      */
     private $firstname;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=60)
      */
     private $lastname;
 
@@ -32,9 +32,11 @@ class CustomerReview
     private $review;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=130)
      */
     private $email;
+
+
 
     public function getId(): ?int
     {
@@ -87,4 +89,5 @@ class CustomerReview
 
         return $this;
     }
+
 }

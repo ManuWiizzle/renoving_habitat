@@ -12,8 +12,9 @@
         <thead>
             <tr>
                 
-                <th>Nom de la photo</th>
-                <th>Place</th>
+                <th>Titre</th>
+                <th>Lieu</th>
+                <th>Date</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -23,6 +24,7 @@
                 
                 <td>{{ site.name }}</td>
                 <td>{{ site.place }}</td>
+                <td>{{ site.beginSite.updatedAt|date("d/m/Y") }}</td>
                 <td>
                     <a href="{{ path('site_show', {'id': site.id}) }}">Afficher</a>
                     <a href="{{ path('site_edit', {'id': site.id}) }}">Modifier</a>
@@ -37,6 +39,6 @@
         </table>
     </div>
     <div class="w-100 text-center">
-        <a href="{{ path('site_new') }}">Ajouter des nouvelles photos</a>
+        <a href="{{ path('site_new') }}">Ajouter de nouvelles photos</a>
     </div>
 {% endblock %}

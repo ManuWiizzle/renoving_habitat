@@ -15,7 +15,7 @@ class FinalSiteType extends AbstractType
     {
         $builder
             ->add('imageFile', VichImageType::class, [
-                'label'=>'Image2(2Mo maxi)',
+                'label'=>'Image2(2Mo max)',
                 'allow_delete' => false,
                 'download_uri' => false,
                 'required' => false,

@@ -1,4 +1,36 @@
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+<div class="container mx-auto text-center form_edit_container">
+{{ form_start(form, { 'attr': {'id': 'edit_form_site'} }) }}
+    <div class="form_edit_title_container my-3">
+        <div class="form_edit_label">
+        {{ form_label(form.name, 'Titre') }}
+        </div>
+        <div>
+        {{ form_widget(form.name, { 'attr': {'class': 'name_input_city form-control mx-auto'} }) }}
+        </div>
+    </div>
+    <div class="form_edit_title_container my-3">
+        <div class="form_edit_label">
+            {{ form_label(form.place, 'Lieu') }}
+        </div>
+        <div>
+            {{ form_widget(form.place, { 'attr': {'class': 'place_input_city form-control mx-auto', 'rows': '2'} }) }}
+        </div>
+    </div>
+    <div class="form_edit_title_container my-3">
+        <div class="form_edit_label">
+        {{ form_label(form.beginSite, 'Premiere photo') }}
+        </div>
+        <div>
+        {{ form_widget(form.beginSite, { 'attr': {'class': 'beginSite_input_city form-control mx-auto'} }) }}
+        </div>
+
+        <div class="form_edit_label mt-5">
+        {{ form_label(form.finalSite, 'Seconde photo') }}
+        </div>
+        <div>
+        {{ form_widget(form.finalSite, { 'attr': {'class': 'finalSite_input_city form-control mx-auto'} }) }}
+        </div>
+    </div>
+    {{ form_end(form) }}
+    <button type="submit" form="edit_form_site" class="sendButtonGreen">{{ button_label|default('Enregistrer') }}</button>
+</div>

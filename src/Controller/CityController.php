@@ -39,6 +39,7 @@ class CityController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($city);
             $entityManager->flush();
+            
 
             return $this->redirectToRoute('city_index');
         }

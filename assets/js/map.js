@@ -2,7 +2,7 @@ require('leaflet');
 // maps
 let maps = JSON.parse(localisations.dataset.maps);
 
-var map = L.map('mapid').setView([47.901402, 1.903920], 9);
+var map = L.map('localisations').setView([47.901402, 1.903920], 9);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     zoomControl: true,
@@ -30,6 +30,6 @@ maps.forEach(function (maps) {
     marker = new L.marker([maps.longitude, maps.latitude], {icon: homeIcon})
         .bindPopup(maps.name)
         .addTo(map);
-    console.log(marker);
+    
 });
 

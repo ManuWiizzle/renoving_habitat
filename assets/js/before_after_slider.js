@@ -5,6 +5,7 @@ beforeImage.forEach(function (image) {
     beforeArray.push('images/site/' + image.imageName,
     );
 });
+
 let afterArray = [];
 afterImage.forEach(function (image) {
     afterArray.push('images/site/' + image.imageName
